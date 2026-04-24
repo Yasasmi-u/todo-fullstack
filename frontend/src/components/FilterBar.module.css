@@ -1,0 +1,44 @@
+.bar {
+  display: flex;
+  gap: 6px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 16px;
+  border-radius: 99px;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.15s;
+}
+
+.btn:hover {
+  border-color: var(--border-hover);
+  color: var(--text);
+}
+
+.active {
+  background: var(--accent-dim);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.count {
+  background: var(--surface-2);
+  border-radius: 99px;
+  padding: 1px 7px;
+  font-size: 11px;
+  color: var(--text-faint);
+  min-width: 20px;
+  text-align: center;
+}
+
+.active .count {
+  background: var(--accent);
+  color: #fff;
+}
