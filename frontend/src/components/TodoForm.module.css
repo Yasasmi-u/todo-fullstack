@@ -1,0 +1,89 @@
+.form {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  animation: slideDown 0.3s ease;
+}
+
+.titleRow {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.input {
+  flex: 1;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  color: var(--text);
+  font-size: 15px;
+  transition: border-color 0.18s;
+}
+
+.input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-dim);
+}
+
+.input::placeholder { color: var(--text-faint); }
+
+.inputError { border-color: var(--danger) !important; }
+
+.textarea {
+  width: 100%;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  color: var(--text);
+  font-size: 14px;
+  transition: border-color 0.18s;
+  min-height: 72px;
+}
+
+.textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-dim);
+}
+
+.textarea::placeholder { color: var(--text-faint); }
+
+.addBtn {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: var(--radius-sm);
+  background: var(--accent);
+  color: #fff;
+  font-size: 24px;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.addBtn:hover:not(:disabled) { background: var(--accent-hover); transform: scale(1.05); }
+.addBtn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.extra { display: flex; flex-direction: column; gap: 6px; animation: slideDown 0.2s ease; }
+
+.error { color: var(--danger); font-size: 12px; padding-left: 2px; }
+
+.charCount { font-size: 11px; color: var(--text-faint); text-align: right; }
+
+.spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
